@@ -1,0 +1,228 @@
+/* Base Styles */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #003366; /* Navy Blue */
+    color: #fff; /* White Text */
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #003366 0%, #001a33 100%); /* Navy Blue Gradient */
+    color: #fff; /* White Text */
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-image {
+    height: auto;
+    max-height: 80px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: #fff; /* White Text */
+    margin: 0 1.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav a:hover {
+    color: #f7e1a0; /* Light Yellow Hover Effect */
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('images/hero-background.jpg') no-repeat center center/cover;
+    color: #fff; /* White Text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 0;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 3px;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    z-index: 1;
+}
+
+/* Page Sections */
+.page-section {
+    padding: 4rem 2rem;
+    background-color: #003366; /* Navy Blue */
+    margin: 2rem 0;
+    border: 2px solid #f7e1a0; /* Yellow Borders */
+    border-radius: 12px;
+}
+
+/* About Me */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-text {
+    max-width: 800px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.about-photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Portfolio */
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.portfolio-category img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid #f7e1a0; /* Yellow Borders */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-category img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background: #003366; /* Navy Blue */
+    border: 2px solid #f7e1a0; /* Yellow Borders */
+    border-radius: 12px;
+}
+
+form label {
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+form input, form textarea, form select {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #f7e1a0; /* Yellow Borders */
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #fff; /* White Text */
+    background-color: #003366; /* Navy Blue */
+}
+
+form button {
+    padding: 0.75rem;
+    background-color: #f7e1a0; /* Yellow Background */
+    color: #003366; /* Navy Blue Text */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+form button:hover {
+    background-color: #e5c36f; /* Darker Yellow */
+    color: #fff; /* White Text */
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #003366 0%, #001a33 100%); /* Navy Blue Gradient */
+    color: #fff; /* White Text */
+    padding: 2rem;
+    text-align: center;
+    border-top: 2px solid #f7e1a0; /* Yellow Border */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.footer-nav a {
+    color: #fff; /* White Text */
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #f7e1a0; /* Light Yellow Hover Effect */
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
